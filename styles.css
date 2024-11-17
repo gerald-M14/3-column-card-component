@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Kumbh+Sans:wght@200;300&family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,700;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Caprasimo&family=Kumbh+Sans:wght@200;300&family=Lexend+Deca:wght@100..900&family=Roboto:ital,wght@0,400;1,300;1,400;1,500&display=swap');
+
+/* Reseteo de márgenes y rellenos, y ajustes para un diseño consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que los elementos excedan el tamaño de su contenedor */
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex; /* Usamos flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que el body ocupe el 100% de la altura de la ventana */
+    margin: 0; /* Elimina márgenes predeterminados */
+    flex-direction: column; /* Apila los elementos de manera vertical */
+    overflow-y: auto; /* Permite el desplazamiento vertical cuando el contenido sobrepasa la altura de la pantalla */
+}
+
+/* Contenedor principal */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
+    width: 55%; /* Ajusta el ancho del contenedor */
+    background-color: beige; /* Fondo del contenedor */
+    border-radius: 15px; /* Esquinas redondeadas */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    margin-top: 3rem;
+}
+
+/* Estilo de las categorías de vehículos */
+.sedans, .SUVs, .Luxury {
+    font-size: 0.6rem;
+    padding: 1.5rem;
+    color: white; /* Color del texto */
+    height: auto; /* Ajusta la altura según el contenido */
+}
+
+/* Estilo para los encabezados dentro del contenedor */
+.container h1 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para los párrafos dentro del contenedor */
+.container p {
+    font-family: "Roboto", serif;
+    font-size: 0.56rem;
+    line-height: 2;
+}
+
+/* Estilos específicos para cada categoría de vehículo */
+.sedans {
+    grid-column-start: 1;
+    background-color: hsl(31, 77%, 52%);
+}
+
+.SUVs {
+    grid-column-start: 2;
+    background-color: hsl(184, 100%, 22%);
+}
+
+.Luxury {
+    grid-column-start: 3;
+    background-color: hsl(179, 100%, 13%);
+}
+
+/* Estilo del botón */
+.button {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+
+/* Estilo para las imágenes dentro del contenedor */
+.container img {
+    margin-bottom: 2rem;
+    height: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+/* Estilos para los identificadores de cada categoría */
+#sedans {
+    color: hsl(31, 77%, 52%);
+}
+
+#SUVs {
+    color: hsl(184, 100%, 22%);
+}
+
+#Luxury {
+    color: hsl(179, 100%, 13%);
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center; /* Centra el contenido del footer */
+    padding-top: 4rem;
+}
+
+/* Estilos específicos para dispositivos con pantallas pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+
+    /* Ajustes para el contenedor en pantallas pequeñas */
+    .container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: 1fr 1fr 1fr; /* Tres filas */
+        width: 90%; /* Ajusta el ancho del contenedor */
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    /* Estilo del encabezado en dispositivos pequeños */
+    .container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Estilo de los párrafos en dispositivos pequeños */
+    .container p {
+        font-size: 0.8rem;
+    }
+
+    /* Ajustes de las categorías de vehículos en dispositivos pequeños */
+    .sedans {
+        grid-row-start: 1;
+    }
+
+    .SUVs {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    .Luxury {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+
+    /* Ajuste del estilo del botón en pantallas pequeñas */
+    .button {
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+}
