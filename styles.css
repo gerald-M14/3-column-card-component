@@ -23,9 +23,9 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual tamaño */
-    width: 55%; /* Ajusta el ancho del contenedor */
+    width: 50%; /* Ajusta el ancho del contenedor */
     background-color: beige; /* Fondo del contenedor */
-    border-radius: 15px; /* Esquinas redondeadas */
+    border-radius: 8px; /* Esquinas redondeadas */
     overflow: hidden; /* Evita que el contenido sobresalga */
     margin-top: 3rem;
 }
@@ -33,7 +33,7 @@ body {
 /* Estilo de las categorías de vehículos */
 .sedans, .SUVs, .Luxury {
     font-size: 0.6rem;
-    padding: 1.5rem;
+    padding: 1.8rem;
     color: white; /* Color del texto */
     height: auto; /* Ajusta la altura según el contenido */
 }
@@ -41,14 +41,14 @@ body {
 /* Estilo para los encabezados dentro del contenedor */
 .container h1 {
     font-family: "Big Shoulders Display", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 /* Estilo para los párrafos dentro del contenedor */
 .container p {
     font-family: "Roboto", serif;
-    font-size: 0.56rem;
+    font-size: 0.8rem;
     line-height: 2;
 }
 
@@ -70,10 +70,10 @@ body {
 
 /* Estilo del botón */
 .button {
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 1.5rem;
-    font-size: 0.5rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    padding: 0.7rem 1rem;
     border-radius: 20px;
     border: none;
     font-weight: bold;
